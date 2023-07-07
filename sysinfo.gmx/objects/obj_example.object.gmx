@@ -85,6 +85,7 @@ text = "DEVICE NAME: " + utsname_nodename() + "#" +&#13;
 "OS ARCHITECTURE: " + utsname_machine() + "#" +&#13;
 "CPU PROCESSOR: " + cpu_brand() + "#" + &#13;
 "CPU VENDOR: " + cpu_vendor() + "#" + &#13;
+"NUMBER OF CORES: " + string(cpu_numcores()) + "#" + &#13;
 "NUMBER OF PROCESSORS: " + string(cpu_numcpus()) + "#" + &#13;
 "TOTAL MEMORY: " + human_readable(memory_totalram()) + "#" +&#13;
 "MEMORY USED: " + human_readable(memory_usedram()) + "#" +&#13;
