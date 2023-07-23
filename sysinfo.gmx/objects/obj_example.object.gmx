@@ -73,9 +73,7 @@ window_center();</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* glxinfo is required on Linux and *BSD devices.&#13;
-Install mesa-utils (Linux) or glx-utils (*BSD) */&#13;
-draw_set_color(c_white);&#13;
+            <string>draw_set_color(c_white);&#13;
 draw_set_font(fnt_example);&#13;
 text = "DEVICE NAME: " + utsname_nodename() + "#" +&#13;
 "OS PRODUCT NAME: " + utsname_codename() + "#" + &#13;
