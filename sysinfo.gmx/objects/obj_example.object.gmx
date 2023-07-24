@@ -77,7 +77,7 @@ window_center();</string>
 draw_set_font(fnt_example);&#13;
 text = "DEVICE NAME: " + utsname_nodename() + "#" +&#13;
 "OS PRODUCT NAME: " + utsname_codename() + "#" + &#13;
-"OS VERSION: " + utsname_version() + "#" + &#13;
+"OS RELEASE: " + utsname_release() + "#" + &#13;
 "OS ARCHITECTURE: " + utsname_machine() + "#" +&#13;
 "OS KERNEL: " + utsname_sysname() + "#" + &#13;
 "CPU PROCESSOR: " + cpu_brand() + "#" + &#13;
