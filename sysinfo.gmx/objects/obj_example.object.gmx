@@ -80,7 +80,6 @@ text =&#13;
   "OS PRODUCT NAME: " + ((string_length(utsname_codename())) ? utsname_codename() : "(null)") + "#" +&#13;
   "OS KERNEL NAME: " + ((string_length(utsname_sysname())) ? utsname_sysname() : "(null)") + "#" +&#13;
   "OS KERNEL RELEASE: " + ((string_length(utsname_release())) ? utsname_release() : "(null)") + "#" +&#13;
-  "OS KERNEL VERSION: " + ((string_length(utsname_version())) ? utsname_version() : "(null)") + "#" +&#13;
   "OS ARCHITECTURE: " + ((string_length(utsname_machine())) ? utsname_machine() : "(null)") + "#" +&#13;
   "CPU PROCESSOR: " + ((string_length(cpu_brand())) ? cpu_brand() : "(null)") + "#" +&#13;
   "CPU VENDOR: " + ((string_length(cpu_vendor())) ? cpu_vendor() : "(null)") + "#" +&#13;
