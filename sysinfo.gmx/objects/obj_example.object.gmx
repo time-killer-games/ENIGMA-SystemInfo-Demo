@@ -76,24 +76,24 @@ window_center();</string>
             <string>draw_set_color(c_white);&#13;
 draw_set_font(fnt_example);&#13;
 text =&#13;
-  "OS DEVICE NAME: " + ((string_length(utsname_nodename())) ? utsname_nodename() : "(null)") + "#" +&#13;
-  "OS PRODUCT NAME: " + ((string_length(utsname_codename())) ? utsname_codename() : "(null)") + "#" +&#13;
-  "OS KERNEL NAME: " + ((string_length(utsname_sysname())) ? utsname_sysname() : "(null)") + "#" +&#13;
-  "OS KERNEL RELEASE: " + ((string_length(utsname_release())) ? utsname_release() : "(null)") + "#" +&#13;
-  "OS ARCHITECTURE: " + ((string_length(utsname_machine())) ? utsname_machine() : "(null)") + "#" +&#13;
-  "CPU PROCESSOR: " + ((string_length(cpu_brand())) ? cpu_brand() : "(null)") + "#" +&#13;
-  "CPU VENDOR: " + ((string_length(cpu_vendor())) ? cpu_vendor() : "(null)") + "#" +&#13;
-  "CPU CORE COUNT: " + ((cpu_numcores() != -1) ? string(cpu_numcores()) : "(null)") + "#" +&#13;
-  "CPU PROCESSOR COUNT: " + ((cpu_numcpus() != -1) ? string(cpu_numcpus()) : "(null)") + "#" +&#13;
-  "RANDOM-ACCESS MEMORY TOTAL: " + ((memory_totalram() != -1) ? human_readable(memory_totalram()) : "(null)") + "#" +&#13;
-  "RANDOM-ACCESS MEMORY USED: " + ((memory_usedram() != -1) ? human_readable(memory_usedram()) : "(null)") + "#" +&#13;
-  "RANDOM-ACCESS MEMORY FREE: " + ((memory_availram() != -1) ? human_readable(memory_availram()) : "(null)") + "#" +&#13;
-  "SWAP MEMORY TOTAL: " + ((memory_totalvmem() != -1) ? human_readable(memory_totalvmem()) : "(null)") + "#" +&#13;
-  "SWAP MEMORY USED: " + ((memory_usedvmem() != -1) ? human_readable(memory_usedvmem()) : "(null)") + "#" +&#13;
-  "SWAP MEMORY FREE: " + ((memory_availvmem() != -1) ? human_readable(memory_availvmem()) : "(null)") + "#" +&#13;
-  "GPU MANUFACTURER: " + ((string_length(gpu_vendor())) ? gpu_vendor() : "(null)") + "#" +&#13;
-  "GPU RENDERER: " + ((string_length(gpu_renderer())) ? gpu_renderer() : "(null)") + "#" +&#13;
-  "GPU MEMORY: " + ((gpu_videomemory() != -1) ? human_readable(gpu_videomemory()) : "(null)");&#13;
+  "OS DEVICE NAME: " + os_device_name() + "#" +&#13
+  "OS PRODUCT NAME: " + os_product_name() + "#" +&#13
+  "OS KERNEL NAME: " + os_kernel_name() + "#" +&#13
+  "OS KERNEL RELEASE: " + os_kernel_release() + "#" +&#13
+  "OS ARCHITECTURE: " + os_architecture() + "#" +&#13
+  "CPU PROCESSOR: " + cpu_processor() + "#" +&#13
+  "CPU VENDOR: " + cpu_vendor() + "#" +&#13
+  "CPU CORE COUNT: " + cpu_core_count() + "#" +&#13
+  "CPU PROCESSOR COUNT: " + cpu_processor_count() + "#" +&#13
+  "RANDOM-ACCESS MEMORY TOTAL: " + memory_totalram(true) + "#" +&#13
+  "RANDOM-ACCESS MEMORY USED: " + memory_usedram(true) + "#" +&#13
+  "RANDOM-ACCESS MEMORY FREE: " + memory_freeram(true) + "#" +&#13
+  "SWAP MEMORY TOTAL: " + memory_totalswap(true) + "#" +&#13
+  "SWAP MEMORY USED: " + memory_usedswap(true) + "#" +&#13
+  "SWAP MEMORY FREE: " + memory_freeswap(true) + "#" +&#13
+  "GPU MANUFACTURER: " + gpu_manufacturer() + "#" +&#13
+  "GPU RENDERER: " + gpu_renderer() + "#" +&#13
+  "GPU MEMORY: " + memory_totalvram(true);&#13
 d3d_set_projection_ortho(0, 0, window_get_width(), window_get_height(), 0);&#13;
 display_set_gui_size(window_get_width(), window_get_height());&#13;
 draw_text(8, 8, text);</string>
