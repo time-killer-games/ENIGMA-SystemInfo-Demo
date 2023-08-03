@@ -108,16 +108,15 @@ text =&#13;
   "CPU VENDOR: " + cpu_vendor() + "#" +&#13;
   "CPU CORE COUNT: " + cpu_core_count() + "#" +&#13;
   "CPU PROCESSOR COUNT: " + cpu_processor_count() + "#" +&#13;
-  "RANDOM-ACCESS MEMORY TOTAL: " + memory_totalram(human_readable) + ((human_readable) ? "" : " B") + "#" +&#13;
-  "RANDOM-ACCESS MEMORY USED: " + memory_usedram(human_readable) + ((human_readable) ? "" : " B") + "#" +&#13;
-  "RANDOM-ACCESS MEMORY FREE: " + memory_freeram(human_readable) + ((human_readable) ? "" : " B") + "#" +&#13;
-  "SWAP MEMORY TOTAL: " + memory_totalswap(human_readable) + ((human_readable) ? "" : " B") + "#" +&#13;
-  "SWAP MEMORY USED: " + memory_usedswap(human_readable) + ((human_readable) ? "" : " B") + "#" +&#13;
-  "SWAP MEMORY FREE: " + memory_freeswap(human_readable) + ((human_readable) ? "" : " B") + "#" +&#13;
+  "RANDOM-ACCESS MEMORY TOTAL: " + ((memory_totalram(human_readable) != "(null)") ? (memory_totalram(human_readable) + ((human_readable) ? "" : " B")) : "(null)") + "#" +&#13;
+  "RANDOM-ACCESS MEMORY USED: " + ((memory_usedram(human_readable) != "(null)") ? (memory_usedram(human_readable) + ((human_readable) ? "" : " B")) : "(null)") ? "" : " B") + "#" +&#13;
+  "RANDOM-ACCESS MEMORY FREE: " + ((memory_freeram(human_readable) != "(null)") ? (memory_freeram(human_readable) + ((human_readable) ? "" : " B")) : "(null)") + "#" +&#13;
+  "SWAP MEMORY TOTAL: " + ((memory_totalswap(human_readable) != "(null)") ? (memory_totalswap(human_readable) + ((human_readable) ? "" : " B")) : "(null)") + ((human_readable) ? "" : " B") + "#" +&#13;
+  "SWAP MEMORY USED: " + ((memory_usedswap(human_readable) != "(null)") ? (memory_usedswap(human_readable) + ((human_readable) ? "" : " B")) : "(null)") ? "" : " B") + "#" +&#13;
+  "SWAP MEMORY FREE: " + ((memory_freeswap(human_readable) != "(null)") ? (memory_freeswap(human_readable) + ((human_readable) ? "" : " B")) : "(null)") + "#" +&#13;
   "GPU MANUFACTURER: " + gpu_manufacturer() + "#" +&#13;
   "GPU RENDERER: " + gpu_renderer() + "#" +&#13;
-  "GPU MEMORY: " + memory_totalvram(human_readable) + ((human_readable) ? "" : " B");&#13;
-d3d_set_projection_ortho(0, 0, window_get_width(), window_get_height(), 0);&#13;
+  "GPU MEMORY: " + ((memory_totalvram(human_readable) != "(null)") ? (memory_totalvram(human_readable) + ((human_readable) ? "" : " B")) : "(null)");&#13;
 display_set_gui_size(window_get_width(), window_get_height());&#13;
 draw_text(8, 8, text);</string>
           </argument>
