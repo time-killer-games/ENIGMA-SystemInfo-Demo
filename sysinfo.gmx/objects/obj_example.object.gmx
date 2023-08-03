@@ -28,6 +28,7 @@
             <string>d3d_start();&#13;
 window_set_caption("About this Computer");&#13;
 window_set_icon(spr_example, 0);&#13;
+human_readable = true;&#13;
 alarm[0] = 2;</string>
           </argument>
         </arguments>
@@ -52,6 +53,28 @@ alarm[0] = 2;</string>
             <kind>1</kind>
             <string>window_set_rectangle(window_get_x(), window_get_y(), string_width(text) + 16, string_height(text) + 16);&#13;
 window_center();</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="53" eventtype="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <useapplyto>-1</useapplyto>
+        <isquestion>0</isquestion>
+        <exetype>2</exetype>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>human_readable = !human_readable;</string>
           </argument>
         </arguments>
       </action>
@@ -85,15 +108,15 @@ text =&#13;
   "CPU VENDOR: " + cpu_vendor() + "#" +&#13;
   "CPU CORE COUNT: " + cpu_core_count() + "#" +&#13;
   "CPU PROCESSOR COUNT: " + cpu_processor_count() + "#" +&#13;
-  "RANDOM-ACCESS MEMORY TOTAL: " + memory_totalram(true) + "#" +&#13;
-  "RANDOM-ACCESS MEMORY USED: " + memory_usedram(true) + "#" +&#13;
-  "RANDOM-ACCESS MEMORY FREE: " + memory_freeram(true) + "#" +&#13;
-  "SWAP MEMORY TOTAL: " + memory_totalswap(true) + "#" +&#13;
-  "SWAP MEMORY USED: " + memory_usedswap(true) + "#" +&#13;
-  "SWAP MEMORY FREE: " + memory_freeswap(true) + "#" +&#13;
+  "RANDOM-ACCESS MEMORY TOTAL: " + memory_totalram(human_readable) + "#" +&#13;
+  "RANDOM-ACCESS MEMORY USED: " + memory_usedram(human_readable) + "#" +&#13;
+  "RANDOM-ACCESS MEMORY FREE: " + memory_freeram(human_readable) + "#" +&#13;
+  "SWAP MEMORY TOTAL: " + memory_totalswap(human_readable) + "#" +&#13;
+  "SWAP MEMORY USED: " + memory_usedswap(human_readable) + "#" +&#13;
+  "SWAP MEMORY FREE: " + memory_freeswap(human_readable) + "#" +&#13;
   "GPU MANUFACTURER: " + gpu_manufacturer() + "#" +&#13;
   "GPU RENDERER: " + gpu_renderer() + "#" +&#13;
-  "GPU MEMORY: " + memory_totalvram(true);&#13;
+  "GPU MEMORY: " + memory_totalvram(human_readable);&#13;
 d3d_set_projection_ortho(0, 0, window_get_width(), window_get_height(), 0);&#13;
 display_set_gui_size(window_get_width(), window_get_height());&#13;
 draw_text(8, 8, text);</string>
