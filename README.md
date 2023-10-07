@@ -10,3 +10,5 @@ Only works with my fork of enigma: https://github.com/time-killer-games/stigma-d
 ![macOS (arm64)](https://github.com/time-killer-games/ENIGMA-SystemInfo-Demo/raw/main/macos-arm64.png "macOS (arm64)")
 
 ![Linux](https://github.com/time-killer-games/ENIGMA-SystemInfo-Demo/raw/main/linux.png "Linux")
+
+![FreeBSD](https://github.com/time-killer-games/ENIGMA-SystemInfo-Demo/raw/main/freebsd.png "FreeBSD")
