@@ -118,6 +118,11 @@ text =&#13;
   "GPU MANUFACTURER: " + gpu_manufacturer() + "#" +&#13;
   "GPU RENDERER: " + gpu_renderer() + "#" +&#13;
   "GPU MEMORY: " + ((memory_totalvram(human_readable) != "(null)") ? (memory_totalvram(human_readable) + ((human_readable) ? "" : " B")) : _totalram);&#13;
+if (window_get_width() != string_width(text) + 16 || window_get_height() != string_height(text) + 16) {&#13;
+  window_set_position(window_get_x() + (((window_get_width() + string_width(text) + 16)) / 2) - (string_width(text) + 16),&#13; 
+  window_get_y() + (((window_get_height() + string_height(text) + 16)) / 2) - (string_height(text) + 16));&#13;
+  window_set_size(string_width(text) + 16, string_height(text) + 16);&#13;
+}&#13;
 display_set_gui_size(window_get_width(), window_get_height());&#13;
 draw_text(8, 8, text);</string>
           </argument>
