@@ -8,3 +8,5 @@ Only works with my fork of enigma: https://github.com/time-killer-games/stigma-d
 ![macOS](https://github.com/time-killer-games/ENIGMA-SystemInfo-Demo/raw/main/macos.png "macOS")
 
 ![Linux](https://github.com/time-killer-games/ENIGMA-SystemInfo-Demo/raw/main/linux.png "Linux")
+
+![OpenBSD](https://github.com/time-killer-games/ENIGMA-SystemInfo-Demo/raw/main/openbsd.png "OpenBSD")
